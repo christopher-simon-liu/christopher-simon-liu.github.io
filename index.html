@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christopher Simon Liu</title>
+  <style>
+    :root {
+      --bg: #0b0f10;
+      --fg: #d7e0d9;
+      --muted: #8fa08f;
+      --accent: #7ee787;
+      --link: #8cc8ff;
+      --border: #1b2426;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .terminal {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 14px;
+      background: #11171a;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #2d3a3d;
+    }
+
+    .title {
+      margin-left: 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .screen {
+      padding: 20px;
+    }
+
+    .block {
+      margin: 0 0 20px 0;
+      white-space: pre-wrap;
+    }
+
+    .prompt {
+      color: var(--accent);
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="terminal">
+      <div class="bar">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="title">christopher-simon-liu@w3cil:~</span>
+      </div>
+
+      <div class="screen">
+<!-- moo -->
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ whoami</span>
+Christopher Simon Liu
+</div>
+
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ hostname</span>
+<a href="https://carteryagemann.com/pages/w3cil-lab.html">w3cil</a> (osu.edu)
+</div>
+
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ ps aux | grep chris</span>
+phd_student
+sec_researcher
+proj_lead
+herder_of_the_cats
+</div>
+
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ uptime</span>
+PhD year 1 (running)
+</div>
+
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ ls</span>
+<a href="#about">about.txt</a>  
+<a href="#publications">publications.bib</a>  
+<a href="#projects">projects/</a>  
+<a href="#cv">cv.pdf</a>  
+<a href="#contact">contact.txt</a>  
+<a href="#notes">notes.txt</a>
+</div>
+
+<div id="about" class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ cat about.txt</span>
+Systems security researcher.
+
+I study how software systems behave under adversarial pressure.
+
+My current work focuses on malware capability analysis, reverse engineering workflows, and analysis under incomplete or noisy program evidence.
+
+Reverse engineering, AI, hardware, and whatever else gets the job done.
+</div>
+
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ grep -i interests about.txt</span>
+reverse engineering
+malware analysis
+systems security
+</div>
+
+<div id="publications" class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ less publications.bib</span>
+@misc{liu2025faultbanana,
+  title  = {Fault Banana},
+  year   = {2025},
+  note   = {Exploratory measurement study on fault injection (unpublished)}, 
+  pdf    = <a href="#">[pdf]</a>
+}
+
+@article{liu2025faultinjection,
+  title   = {A Beginner-Friendly Introduction to Fault Injection Attacks},
+  journal = {arXiv},
+  year    = {2025},
+  note    = {Introductory overview of fault injection attacks},
+  url     = <a href="https://arxiv.org/abs/2509.18341">[arXiv]</a>
+}
+
+(END)q
+</div>
+
+<div id="projects" class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ find ./projects -maxdepth 1 -type d</span>
+./projects/<a href="https://github.com/christopher-simon-liu/FaultBanana">fault-banana</a>
+</div>
+
+<div id="cv" class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ wget cv.pdf</span>
+<a href="cv.pdf">cv.pdf</a> saved [OK]
+</div>
+
+        
+<div id="contact" class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ cat contact.txt</span>
+email: <a href="mailto:liu.8689@osu.edu">liu.8689@osu.edu</a>
+scholar: <a href="https://scholar.google.com/citations?hl=en&user=fSdh0GgAAAAJ">Google Scholar</a>
+github: <a href="https://github.com/christopher-simon-liu">github.com/christopher-simon-liu</a>
+linkedin: <a href="https://www.linkedin.com/in/christopher-simon-liu/">LinkedIn</a>
+</div>
+
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ noise &gt; /dev/null</span></div>
+
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ mkdir -p future-gadget-sec-lab</span></div>
+
+<div id="notes" class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ cat notes.txt</span>
+controlling ambiguity professionally
+</div>
+
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ echo "no shells were harmed in the making of this website :^)"</span>
+no shells were harmed in the making of this website :^)
+</div>
+
+<div class="block"><span class="prompt">christopher-simon-liu@w3cil:~$ exit</span></div>
+
+      </div>
+    </section>
+
+    <div class="footer">
+      Pure HTML, minimal CSS, no frameworks.
+    </div>
+    <!-- El Psy Congroo -->
+  </main>
+</body>
+</html>
